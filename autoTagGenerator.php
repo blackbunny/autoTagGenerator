@@ -93,7 +93,7 @@ class autoTag {
 		'<', '>', '!', '?', '/', '-',
 		'_', '[', ']', ':', '+', '=', '#',
 		'$', '&quot;', '&copy;', '&gt;', '&lt;', 
-		'&nbsp;', '&trade;', '&reg;', ';', '•',
+		'&nbsp;', '&trade;', '&reg;', '', '•',
 		chr(10), chr(13), chr(9));
 
 		$content = str_replace($punctuations, " ", $content);
@@ -131,8 +131,48 @@ class autoTag {
                     "ücretli", "özelliği", "özellikleri", "özel", "çamlıca’da",  "özel", "zengin", 
                     "yerel", "sigara", "saç", "oturma", "direkt",  "banyoda", "zemin", "yüksek", "yer", 
                     "yayınını", "yayını", "yakasına", "tüm", "tacı", "sunuluyor", "standart", "ssc", "spot", 
-                    "spa’nın", "seçeneği", "seçenekler", "servisi", radyo, queen, olarak, odalarının, oda, mini, mermer, malzemeleri, makinesi, led, kurutma, kuru, konforu, konaklama, kişi, kasası, kaplı, kahvaltı, kablosuz, içilemeyen, içilebilen, istanbul’un, internet, indirim, ikramlar, hızda, hotel, hizmeti, havalandırma, hakim, güzide, gece, ekran, döşenmiş, durum, dinleyebilme, deluxe, dekorasyon, co’ya, butonu, buklet, başı, baş, bar, banyoda, banyo, aydınlatma, avrupa, anadolu, alan, ahşap, acil
-
+                    "spa’nın", "seçeneği", "seçenekler", "servisi", "olarak", "odalarının", "mini", "mermer", "malzemeleri", "makinesi", 
+                    "led", "kurutma", "kuru", "konforu", "kasası", "kaplı", "içilemeyen", "içilebilen", "istanbul’un", "hızda",
+                    "hizmeti", "havalandırma", "hakim", "güzide", "ekran", "döşenmiş", "durum", "dinleyebilme", "dekorasyon", 
+                    "co’ya", "butonu", "başı", "baş", "banyoda", "aydınlatma", "alan", "ahşap", "acil","yararlanabileceğiniz",
+                    "şey", "çeşitli", "yerine", "tatilde", "olan", "keyfini", "keyfi", "her", "geçirmek", "eğlenceli", 
+                    "com’dan", "arasında", "günün", "tarihleri", "posta", "kodunu", "kodlarını","fırsatı",
+                    "önce", "günün", "yarım","tatilini", "tarihleri", "rezervasyonunu", "inkim", "dilediğin", "herşey","uzatabilirsin",
+                    "ulaşabilirsin","yapman","rezervasyonunu","otelde","dir","günün","detayları","bileti","dönüş","turu",
+                    "soluk", "ortasında", "kişiye", "havalimanına", "güzelliklerinin", "fırsattan", "€uro", "kullanılmayan", "firsat", 
+                    "tesisleri’nde", "tesisleri", "sizleri", "böreği", "bekliyor", "balığı", "adet", "saatleri","bulacaksınız","arada",
+                    "üzerinde", "tipte", "tarafı", "sistemi", "sarmalanmış", "sahipliği", "oluşuyor", "konfirme", "kabul", 
+                    "içinde", "evleri", "evlerden", "evlerde", "eskiden", "ege’nin", "dönüm", "com", "bağları", "alıyor", "alanda", 
+                    "tam", "sizleri", "safranbolu’nun", "otelimiz", "isterseniz", "yada","mesafesinde","türkiye’nin",
+                    "çeşitleri","müzesi", "öncesinden","cafe’de","bakırköy’ün", "şehrin", "veren", "uzun", "sıcak", "masası", "ekstra", "bulunmaktadır", 
+                    "zinde", "siyah", "konağı’nda", "güne", "beyaz","hafta","istediğiniz","isterseniz", "istediğiniz", "imkanı", "buğu","ekipmanlar","bulunmaktadır",
+                    "üzeri", "yapmayan", "tl’dir","gölü", "eşliğinde", "doğru", "bugün", "boyunca", "ardından", "abant",
+                    "zorunludur", "yürüyüşümüz", "yolculuğumuz", "yapılması", "sonu", "mangalda", "içi", "hizmetleri", "harcamalar", "hafta", 
+                    "üzerinden", "ücretleri", "ücretine", "ücret", "önü", "çocuklar", "çevresinde", "yemeği", "yaş", "yapılması", 
+                    "takdirde", "sonrası", "misafirler", "kısa", "koltuk", "içi", "hizmetler", "hareket", "evlendirme", "eski", "ediyoruz", 
+                    "doğanın", "dairesi", "camii", "bugün’den", "ardından", "tümünde","saati","out","odalarımızın","mevcuttur",
+                    "ağaçları","check","kahvaltısı","günler","edilmektedir","yayınlı",
+                    "şehre", "şartları", "üzerinden", "ülke", "ücreti", "önemli", "ödemekle", "zorunlu", "ziyaret", "yıldızlı", 
+                    "yürüyerek", "yükümlüdürler", "yollarının", "yolculuğun", "yolculuk", "yerleşiyoruz", "yerler", "yeri", "yemeğimizi", 
+                    "yemeği", "yaşandığı", "yapilacak", "yapacağımız", "www", "varışımızın", "varıyoruz", "uçuş", "uygulamalarına", "tutulamaz",
+                    "tutar", "turuna", "turumuzun", "turumuzda", "turumuz", "turları", "turlar", "turda", "tura", "toplam", "tekkesi", "tarafından", 
+                    "talep", "tabidir", "sınırlıdır", "sorumlu", "sonrasında", "sonrası", "siz", "sigortası", "saklı", "rakamlar", "php", "pc893", "pc712", 
+                    "otellerde", "otelimize", "otelimizden", "otelimizde", "otelden", "ortalama", "oluyor", "olması", "ohrid’e", "misafirlerimizden", 
+                    "misafirlerimiz", "meydanı", "kısa", "köprüsü", "kurallar", "kulesi", "krizantem", "kilisesi", "katılacak", "kapı", "kalmak", 
+                    "kalkış", "kahvaltımızın", "işlemlerinin", "istanbul`a", "http", "hizmetleri", "hizmetler", "havalimanında", "hava", 
+                    "hareket", "hakkını", "gümrük", "görülecek", "göreceğimiz", "gölü", "gidiş", "geçerli", "gezisi", "gezi", "gerekli", 
+                    "genel", "geceleme", "flypgs", "fazla", "eşliğinde", "esnasında", "eski", "ediyoruz", "edilir", "eden", 
+                    "düzenlenecek", "dönüyoruz", "durumunda", "değiştirme", "daha", "com", "camii", "bulunmaktadır", "bizleri", "birlikte", "biri", 
+                    "bilgilendirme", "biletleri", "bey", "belirtilen", "belgrad’a", "belgrad", "bedeli", "başkenti", "baba", "ağırlık", "ayrılarak",
+                    "aynı", "aspx", "askeri", "arzu", "ardından", "arasındadır", "aracı", "alıyoruz", "ali", "abartılı","yere","sizi","misafirlerimize",
+                    "alınan","serbest","veriyoruz","yol","iptal","zamanda", "yürüyüş", "yapabilirler", "yapabilir","iptal",
+                    "edilmez", "edilen", "dileyen", "başlıyoruz","sağlayacak","bağlıdır",
+                    "şehir", "turumuza", "sanatları", "rehberimizin", "paşa", "mehmet", "konağı", "görüyoruz", "gezilerimizin", 
+                    "değerli", "camisi", "cami", "buradan", "başlıyoruz", "başlangıç", "görülmesi", "geçiş", "döneme", "dönemde", "bölgesi", "bölgede", "başlar",
+                    "şehri", "yılında", "yüzyıl", "yapıldığı", "vadisi", "türk", "ortaya", "oluşan", "olur", "kralları", "insan", 
+                     "yanında","yansıtan","haber","hayran", "haber", "güzel", "gezilmesi", "gezileri", "barış", "sokakları","sokakları",
+                    "çayında","yerleşim","tarihe","konutların","konutlar","genelde","bölgeye","katlı","konutların","otobüste","peyniri"
+                    
                     );
 		//create an array out of the site contents
 		$s = explode(" ", $this->contents);
@@ -143,7 +183,8 @@ class autoTag {
 			//delete single or two letter words and
 			//Add it to the list if the word is not
 			//contained in the common words list.
-			if(mb_strlen(trim($val)) >= $this->wordLengthMin  && !in_array(trim($val), $common)  && !is_numeric(trim($val))) {
+                        $val = str_replace(" ", "", $val);
+			if(mb_strlen(trim($val)) >= $this->wordLengthMin  && !in_array(trim($val), $common)  && !is_numeric(trim($val)) && !stripos(trim($val), "’")) {
 				$k[] = trim($val);
 			}
 		}
@@ -230,7 +271,7 @@ class autoTag {
 		$occur_filtered = array();
 		foreach ($array_count_values as $word => $occured) {
 			if ($occured >= $min_occur) {
-				$occur_filtered[] = $word;
+				$occur_filtered[] = str_replace(";", "", $word);
 			}
 		}
 
